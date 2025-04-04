@@ -1,0 +1,48 @@
+[project]
+name = "pytorch-learn"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=0.6.3",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+    "langchain-chroma>=0.2.2",
+    "langchain-community>=0.3.20",
+    "langchain-core>=0.3.45",
+    "langchain-ollama>=0.2.3",
+    "ollama>=0.4.7",
+    "pymilvus[model]>=2.5.6",
+    "sentence-transformers>=3.4.1",
+    "streamlit>=1.43.2",
+    "torch",
+    "torchvision>=0.21.0",
+    "towhee",
+    "towhee.models",
+    "opencv-python",
+    "timm>=1.0.15",
+    "sentencepiece>=0.2.0",
+]
+
+
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu124" }]
+torchvision = [{ index = "pytorch-cu124" }]
+opencv-python = [{ index = "ali" }]
+sentencepiece= [{ index = "ali" }]
+
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[[tool.uv.index]]
+name = "ali"
+url = "http://mirrors.aliyun.com/pypi/simple"
+explicit = true
+
+[tool.uv.workspace]
+members = ["towhee_test"]
