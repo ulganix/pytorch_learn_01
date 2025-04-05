@@ -23,6 +23,8 @@ dependencies = [
     "opencv-python",
     "timm>=1.0.15",
     "sentencepiece>=0.2.0",
+    "matplotlib",
+    "pandas>=2.2.3",
 ]
 
 
@@ -32,6 +34,7 @@ torch = [{ index = "pytorch-cu124" }]
 torchvision = [{ index = "pytorch-cu124" }]
 opencv-python = [{ index = "ali" }]
 sentencepiece= [{ index = "ali" }]
+matplotlib=[{ index = "ali" }]
 
 
 [[tool.uv.index]]
